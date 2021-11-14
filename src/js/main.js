@@ -4,3 +4,4 @@
 /* Partials */
 
 //= ./partials/main.js
+//= ./partials/copy.js
