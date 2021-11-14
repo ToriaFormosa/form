@@ -1,0 +1,46 @@
+.form-page {
+	padding: 53px 0 192px;
+
+	&__row {
+		display: flex;
+		margin: 0 -12px;
+
+		@include max(lg) {
+			flex-direction: column;
+			margin: 0;
+		}
+	}
+
+	&__left,
+	&__right {
+		margin: 0 12px;
+
+		@include max(lg) {
+			margin: 0;
+		}
+	}
+
+	&__left {
+		width: calc(77% - 24px);
+
+		@include max(lg) {
+			width: 100%;
+			order: 1;
+		}
+	}
+
+	&__right {
+		width: calc(23% - 24px);
+		align-self: flex-start;
+		position: -webkit-sticky;
+		position: sticky;
+		top: 24px;
+
+		@include max(lg) {
+			width: 100%;
+			margin-bottom: 24px;
+			position: relative;
+			top: 0;
+		}
+	}
+}

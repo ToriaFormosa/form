@@ -1,0 +1,157 @@
+.tabs {
+	&__items {
+		display: flex;
+		align-items: flex-end;
+		padding: 0 24px;
+		//border-bottom: 1px solid $white-db;
+		overflow-x: auto;
+		overflow-y: hidden;
+		position: relative;
+	}
+
+	&__items-line {
+		display: block;
+		width: 100%;
+		height: 1px;
+		background-color: $white-db;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+	}
+
+	&__item {
+		padding: 14px 15px 11px;
+		border-radius: 6px 6px 0 0;
+		border: 1px solid transparent;
+		border-bottom-color: $white-db;
+		background-color: $white;
+		font-size: 12px;
+		line-height: 20px;
+		font-weight: 600;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+		white-space: nowrap;
+		cursor: pointer;
+		position: relative;
+		z-index: 1;
+		transition: color 0.3s ease;
+
+		@include hover {
+			color: $green;
+		}
+
+		&--active {
+			border-color: $white-db;
+			border-bottom-color: $white;
+			color: $green;
+		}
+	}
+
+	&__content {
+		padding: 40px 77px 17px;
+
+		@include max(md) {
+			padding: 30px 40px 20px;
+		}
+
+		@include max(sm) {
+			padding: 30px 30px 20px;
+		}
+	}
+
+	&__content-item {
+		display: none;
+
+		&--active {
+			display: block;
+		}
+	}
+
+	&__content-row {
+		display: flex;
+		margin-bottom: 24px;
+
+		@include max(sm) {
+			flex-direction: column;
+		}
+
+		&--mb28 {
+			margin-bottom: 28px;
+		}
+	}
+
+	&__content-direction {
+		display: flex;
+		align-items: center;
+		width: 100%;
+
+		&--column {
+			flex-direction: column;
+		}
+	}
+
+	&__caption {
+		max-width: 124px;
+		width: 100%;
+		padding-top: 8px;
+		margin-right: 16px;
+		text-align: right;
+
+		@include max(sm) {
+			text-align: left;
+			margin-bottom: 8px;
+		}
+
+		&--pt0 {
+			padding-top: 0;
+		}
+	}
+
+	&__label {
+		width: 100%;
+
+		&--designation {
+			max-width: 296px;
+
+			@include max(xs) {
+				max-width: 100%;
+				width: 100%;
+			}
+
+			select {
+				@include max(xs) {
+					width: 100%;
+				}
+			}
+		}
+
+		&--goal {
+			max-width: 192px;
+			margin-right: 24px;
+
+			@include max(xs) {
+				max-width: 100%;
+				width: 58%;
+				margin-right: 7%;
+			}
+		}
+
+		&--goal-currency {
+			max-width: 80px;
+
+			@include max(xs) {
+				max-width: 100%;
+				width: 35%;
+			}
+		}
+
+		&--radio {
+			margin-bottom: 16px;
+		}
+
+		&--checkbox {
+			margin-top: 7px;
+			margin-bottom: 9px;
+		}
+	}
+}
