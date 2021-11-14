@@ -1,0 +1,22 @@
+mixin field(fieldType, fieldName, ph, className, label, options)
+	label.field(class=className)
+		case fieldType
+			when 'text'
+				input(type=fieldType, name=fieldName, placeholder=ph)&attributes(attributes)
+			when 'search'
+				input(type=fieldType, name=fieldName, placeholder=ph)&attributes(attributes)
+			when 'select'
+				select(name=fieldName)&attributes(attributes)
+					each item in options
+						option(value=item)!= item
+			when 'radio'
+				input(type=fieldType, name=fieldName)&attributes(attributes)
+				b
+				span!= label
+			when 'checkbox'
+				input(type=fieldType, name=fieldName)&attributes(attributes)
+				b
+				span!= label
+			when 'range'
+				input(type=fieldType, name=fieldName)&attributes(attributes)
+				span <span class="js-range-value">#{label}</span>px

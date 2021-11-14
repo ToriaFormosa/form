@@ -1,0 +1,31 @@
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 12px 23px;
+	border-radius: 6px;
+	background-color: $green-2e;
+	border: 1px solid $green-2e;
+	font-size: 16px;
+	line-height: 24px;
+	color: $white;
+	cursor: pointer;
+	transition: border-color 0.3s ease, background-color 0.3s ease;
+
+	@include hover {
+		background-color: rgba($green-2e, 0.8);
+		border-color: rgba($green-2e, 0.8);
+	}
+
+	&--white {
+		border-color: $gray-a9;
+		color: $mainColor;
+		background-color: $white;
+		border-radius: 8px;
+
+		@include hover {
+			background-color: $white-db;
+			border-color: rgba($gray-a9, 0.8);
+		}
+	}
+}
