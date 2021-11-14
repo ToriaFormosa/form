@@ -7,5 +7,148 @@ block vars
 		};
 
 block main
+	.form-page
+		.container
+			.form-block
+				.form-block__top
+					.form-block__title Donations
+				.form-block__bottom
+					.form-block__row
+						+field('search', 'search', 'Search', 'form-block__search')
+						+field(
+							'select',
+							'status',
+							'',
+							'simple-select form-block__status',
+							'',
+							['All statuses', 'All statuses', 'All statuses'])
 
+			.form-page__row
+				.form-page__left
+					.form-block.form-block--donation
+						.form-block__top
+							.donation
+								.donation__left
+									.donation__title
+										+icon('dollar')(width='18px', height='18px')
+										span Donation
+									.donation__price €20.60 EUR
+										span ≈ $22.22 USD
+								.donation__right
+									.donation__title.donation__title--gray
+										span ID
+									.donation__id.js-copy
+										span DYHY694Y
+										+icon('copy')(width='18px', height='18px')
+						.form-block__bottom
+							.info
+								.info__item
+									.info__title Status
+									.info__status
+										+icon('check')(width='18px', height='18px')
+										span Success
+								.info__item
+									.info__title Supporter
+									.info__status
+										a(href='#') Charlotte Ann
+								.info__item
+									.info__title Campaign
+									.info__status
+										a(href='#') Workout for water
+
+
+					form.form-block.form-block--tabs(action='', method='post')
+						.tabs
+							.tabs__items
+								.tabs__items-line
+								.tabs__item.tabs__item--active Behavior
+								.tabs__item Appearance
+								.tabs__item Custom Fields
+								.tabs__item Questions
+								.tabs__item URL Control
+							.tabs__content
+								.tabs__content-item.tabs__content-item--active
+									.tabs__content-row
+										.tabs__caption Designation
+										+field(
+											'select',
+											'designation',
+											'',
+											'tabs__label tabs__label--designation',
+											'',
+											['Match Checkout Setting', '2', '3'])
+									.tabs__content-row
+										.tabs__caption Goal
+										.tabs__content-direction
+											+field(
+												'text',
+												'goal',
+												'',
+												'tabs__label tabs__label--goal')(value='$10.00')
+											+field(
+												'select',
+												'goal-currency',
+												'',
+												'tabs__label tabs__label--goal-currency',
+												'',
+												['USD', 'USD', 'USD'])
+									.tabs__content-row
+										.tabs__caption.tabs__caption--pt0 Default Amount
+										.tabs__content-direction.tabs__content-direction--column
+											+field(
+												'radio',
+												'default-amount',
+												'',
+												'field--row tabs__label tabs__label--radio',
+												'Match Checkout Setting')
+											+field(
+												'radio',
+												'default-amount',
+												'',
+												'field--row tabs__label tabs__label--radio',
+												'Customize')(checked='true')
+											+field(
+												'checkbox',
+												'allow-donor',
+												'',
+												'field--row tabs__label tabs__label--checkbox',
+												'Allow donor to change default currency')(checked='true')
+									.tabs__content-row.tabs__content-row--mb28
+										.tabs__caption.tabs__caption--pt0 Border size
+										+field(
+											'range',
+											'border-size',
+											'',
+											'field--row',
+											'2')(min='0', max='3', value='2')
+									.tabs__content-row
+										.tabs__caption.tabs__caption--pt0 Border radius
+										+field(
+											'range',
+											'border-size',
+											'',
+											'field--row',
+											'15')(min='0', max='22.5', value='15', step='0.5')
+								.tabs__content-item 2
+								.tabs__content-item 3
+								.tabs__content-item 4
+								.tabs__content-item 5
+						.form-block__bottom
+							+button('Save changes', 'form-block__save')(type='submit')
+							+button('Cancel', 'button--white form-block__cancel')
+				.form-page__right
+					.form-block.form-block--navigation
+						a.form-block__nav-item(href='#')
+							+icon('repeat')(width='18px', height='18px')
+							span Change Amount
+						a.form-block__nav-item(href='#')
+							+icon('wallet')(width='18px', height='18px')
+							span Change Payment Method
+						a.form-block__nav-item.active(href='#')
+							+icon('calendar')(width='18px', height='18px')
+							span Change Date
+						a.form-block__nav-item(href='#')
+							+icon('x-circle')(width='18px', height='18px')
+							span Cancel Recurring
+					div
 

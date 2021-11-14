@@ -10,6 +10,166 @@
   </head>
   <body>
     <main class="main">
+      <div class="form-page">
+        <div class="container">
+          <div class="form-block">
+            <div class="form-block__top">
+              <div class="form-block__title">Donations</div>
+            </div>
+            <div class="form-block__bottom">
+              <div class="form-block__row">
+                <label class="field form-block__search">
+                  <input type="search" name="search" placeholder="Search">
+                </label>
+                <label class="field simple-select form-block__status">
+                  <select name="status">
+                    <option value="All statuses">All statuses</option>
+                    <option value="All statuses">All statuses</option>
+                    <option value="All statuses">All statuses</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-page__row">
+            <div class="form-page__left">
+              <div class="form-block form-block--donation">
+                <div class="form-block__top">
+                  <div class="donation">
+                    <div class="donation__left">
+                      <div class="donation__title">
+                        <svg width="18px" height="18px">
+                          <use xlink:href="./images/sprite.svg#dollar"></use>
+                        </svg><span>Donation</span>
+                      </div>
+                      <div class="donation__price">€20.60 EUR<span>≈ $22.22 USD</span></div>
+                    </div>
+                    <div class="donation__right">
+                      <div class="donation__title donation__title--gray"><span>ID</span></div>
+                      <div class="donation__id js-copy"><span>DYHY694Y</span>
+                        <svg width="18px" height="18px">
+                          <use xlink:href="./images/sprite.svg#copy"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-block__bottom">
+                  <div class="info">
+                    <div class="info__item">
+                      <div class="info__title">Status</div>
+                      <div class="info__status">
+                        <svg width="18px" height="18px">
+                          <use xlink:href="./images/sprite.svg#check"></use>
+                        </svg><span>Success</span>
+                      </div>
+                    </div>
+                    <div class="info__item">
+                      <div class="info__title">Supporter</div>
+                      <div class="info__status"><a href="#">Charlotte Ann</a></div>
+                    </div>
+                    <div class="info__item">
+                      <div class="info__title">Campaign</div>
+                      <div class="info__status"><a href="#">Workout for water</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <form class="form-block form-block--tabs" action="" method="post">
+                <div class="tabs">
+                  <div class="tabs__items">
+                    <div class="tabs__items-line"></div>
+                    <div class="tabs__item tabs__item--active">Behavior</div>
+                    <div class="tabs__item">Appearance</div>
+                    <div class="tabs__item">Custom Fields</div>
+                    <div class="tabs__item">Questions</div>
+                    <div class="tabs__item">URL Control</div>
+                  </div>
+                  <div class="tabs__content">
+                    <div class="tabs__content-item tabs__content-item--active">
+                      <div class="tabs__content-row">
+                        <div class="tabs__caption">Designation</div>
+                        <label class="field tabs__label tabs__label--designation">
+                          <select name="designation">
+                            <option value="Match Checkout Setting">Match Checkout Setting</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                          </select>
+                        </label>
+                      </div>
+                      <div class="tabs__content-row">
+                        <div class="tabs__caption">Goal</div>
+                        <div class="tabs__content-direction">
+                          <label class="field tabs__label tabs__label--goal">
+                            <input type="text" name="goal" placeholder="" value="$10.00">
+                          </label>
+                          <label class="field tabs__label tabs__label--goal-currency">
+                            <select name="goal-currency">
+                              <option value="USD">USD</option>
+                              <option value="USD">USD</option>
+                              <option value="USD">USD</option>
+                            </select>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="tabs__content-row">
+                        <div class="tabs__caption tabs__caption--pt0">Default Amount</div>
+                        <div class="tabs__content-direction tabs__content-direction--column">
+                          <label class="field field--row tabs__label tabs__label--radio">
+                            <input type="radio" name="default-amount"><b></b><span>Match Checkout Setting</span>
+                          </label>
+                          <label class="field field--row tabs__label tabs__label--radio">
+                            <input type="radio" name="default-amount" checked="true"><b></b><span>Customize</span>
+                          </label>
+                          <label class="field field--row tabs__label tabs__label--checkbox">
+                            <input type="checkbox" name="allow-donor" checked="true"><b></b><span>Allow donor to change default currency</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="tabs__content-row tabs__content-row--mb28">
+                        <div class="tabs__caption tabs__caption--pt0">Border size</div>
+                        <label class="field field--row">
+                          <input type="range" name="border-size" min="0" max="3" value="2"><span><span class="js-range-value">2</span>px</span>
+                        </label>
+                      </div>
+                      <div class="tabs__content-row">
+                        <div class="tabs__caption tabs__caption--pt0">Border radius</div>
+                        <label class="field field--row">
+                          <input type="range" name="border-size" min="0" max="22.5" value="15" step="0.5"><span><span class="js-range-value">15</span>px</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="tabs__content-item">2</div>
+                    <div class="tabs__content-item">3</div>
+                    <div class="tabs__content-item">4</div>
+                    <div class="tabs__content-item">5</div>
+                  </div>
+                </div>
+                <div class="form-block__bottom">
+                  <button class="button form-block__save" type="submit">Save changes</button>
+                  <button class="button button--white form-block__cancel">Cancel</button>
+                </div>
+              </form>
+            </div>
+            <div class="form-page__right">
+              <div class="form-block form-block--navigation"><a class="form-block__nav-item" href="#">
+                  <svg width="18px" height="18px">
+                    <use xlink:href="./images/sprite.svg#repeat"></use>
+                  </svg><span>Change Amount</span></a><a class="form-block__nav-item" href="#">
+                  <svg width="18px" height="18px">
+                    <use xlink:href="./images/sprite.svg#wallet"></use>
+                  </svg><span>Change Payment Method</span></a><a class="form-block__nav-item active" href="#">
+                  <svg width="18px" height="18px">
+                    <use xlink:href="./images/sprite.svg#calendar"></use>
+                  </svg><span>Change Date</span></a><a class="form-block__nav-item" href="#">
+                  <svg width="18px" height="18px">
+                    <use xlink:href="./images/sprite.svg#x-circle"></use>
+                  </svg><span>Cancel Recurring</span></a></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   </body>
   <script src="js/main.min.js"></script>
